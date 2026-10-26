@@ -1,0 +1,4 @@
+# luna-keepalive-card bundle 层：装入 profile 时自动应用（package.json dsh.bundle.patch）。
+- insert:
+    - id: luna-keepalive-card
+      name: 'luna-keepalive-card'

@@ -1,0 +1,29 @@
+{
+  "name": "luna-keepalive-card",
+  "version": "0.1.0",
+  "description": "鲸鱼娘的保活心跳卡 —— dsh 面板里直接看沙箱保活链状态：心跳计数、最近活跃、空闲时长、GitHub Actions 层配置、heartbeat.log 对账尾部。",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["dsh-plugin", "dsh", "keepalive", "monitoring", "whale-girl"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/43aquarius/luna-keepalive-card.git"
+  },
+  "author": "43aquarius",
+  "exports": {
+    ".": "./dsh/index.js",
+    "./client": "./dsh/client.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
